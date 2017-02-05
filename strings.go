@@ -12,7 +12,7 @@ type H struct {
 	S string
 }
 
-// export Hello
+//export Hello
 func Hello(ld bool) (hello string) {
 	switch ld {
 	case true:
@@ -24,7 +24,6 @@ func Hello(ld bool) (hello string) {
 	return
 }
 
-// export NewH
 func NewH(s string) (h H) {
 	h.S = s
 	return
