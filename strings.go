@@ -12,13 +12,17 @@ type H struct {
 	S string
 }
 
-//export Hello
+//export C_Hello
+func C_Hello(ld bool) *C.char {
+	return C.CString(Hello(ld))
+}
+
 func Hello(ld bool) (hello string) {
 	switch ld {
 	case true:
 		hello = ldHello
 	case false:
-		hello = "Hello, World!\000"
+		hello = "Hello, World!"
 	}
 
 	return

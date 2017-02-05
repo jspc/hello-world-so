@@ -32,7 +32,7 @@ func TestHello(t *testing.T) {
 	t.Run("Hello(false)", func(t *testing.T) {
 		h := Hello(false)
 		if h != "Hello, World!" {
-			t.Errorf("received %q, expected 'Hello, World!'")
+			t.Errorf("received %q, expected 'Hello, World!'", h)
 		}
 	})
 }
