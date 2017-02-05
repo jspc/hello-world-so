@@ -18,7 +18,7 @@ func Hello(ld bool) (hello string) {
 	case true:
 		hello = ldHello
 	case false:
-		hello = "Hello, World!"
+		hello = "Hello, World!\000"
 	}
 
 	return
