@@ -1,6 +1,18 @@
 hello-world-so
 ==
 
+Simple test/ sample code for building `.so` files from golang, with some ldflag set data, and then loading in python and, if I have time, scala.
+
+Building
+--
+
+```bash
+$ go build -ldflags "-X main.ldHello=$(date +"%s")"
+```
+
+**Note:** using the date as the value of `main.ldHello` is just a suggestion- anything will do. In this case the unix time is used to show a distinct difference between versions.
+
+
 | who       | what |
 |-----------|------|
 | dockerhub | https://hub.docker.com/r/jspc/hello-world-so/   |
@@ -32,4 +44,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
