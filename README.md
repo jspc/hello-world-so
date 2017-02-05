@@ -6,11 +6,21 @@ Simple test/ sample code for building `.so` files from golang, with some ldflag 
 Building
 --
 
+The following will compile a shared object file, exposing an ABI for libraries to use. It will also expose a header file.
+
 ```bash
 $ go build -ldflags "-X main.ldHello=$(date +"%s")" -buildmode=c-shared -o strings.so strings.go
 ```
 
-**Note:** using the date as the value of `main.ldHello` is just a suggestion- anything will do. In this case the unix time is used to show a distinct difference between versions.
+(In this case the unix time is used as the value of `main.ldHello` to show a distinct difference between versions)
+
+
+The following compiles a small sample `c` file to show how the Shared Object may be used:
+
+```bash
+$ gcc -o hello main.c strings.so
+```
+
 
 
 | who       | what |
