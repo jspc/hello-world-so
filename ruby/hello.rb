@@ -9,5 +9,5 @@ module Strings
 end
 
 puts "Running from Ruby"
-puts Strings.Hello 1
 puts Strings.Hello 0
+puts Strings.Hello 1
