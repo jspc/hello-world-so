@@ -7,7 +7,7 @@ Building
 --
 
 ```bash
-$ go build -ldflags "-X main.ldHello=$(date +"%s")"
+$ go build -ldflags "-X main.ldHello=$(date +"%s")" -buildmode=c-shared -o strings.so strings.go
 ```
 
 **Note:** using the date as the value of `main.ldHello` is just a suggestion- anything will do. In this case the unix time is used to show a distinct difference between versions.
