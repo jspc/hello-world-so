@@ -1,9 +1,18 @@
-package main
+package strings
+
+import (
+	"C"
+)
+
+var (
+	ldHello string
+)
 
 type H struct {
 	S string
 }
 
+// export Hello
 func Hello(ld bool) (hello string) {
 	switch ld {
 	case true:
@@ -15,6 +24,7 @@ func Hello(ld bool) (hello string) {
 	return
 }
 
+// export NewH
 func NewH(s string) (h H) {
 	h.S = s
 	return
@@ -23,3 +33,5 @@ func NewH(s string) (h H) {
 func (h H) String() string {
 	return h.S
 }
+
+func main() {}
